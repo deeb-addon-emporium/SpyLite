@@ -38,10 +38,11 @@ local function refresh()
 			row.name:SetTextColor(classColor(r.class))
 			row.info:SetText(string.format("%s %s  %s", r.level and tostring(r.level) or "??", r.className or "?", ago < 60 and (ago .. "s") or (math.floor(ago / 60) .. "m")))
 			row.entry = r
-			row:Show()
+			row:SetAlpha(1)                 -- secure rows cannot Show/Hide in combat; alpha is fine
 		else
 			row.entry = nil
-			row:Hide()
+			row.name:SetText(""); row.info:SetText("")
+			row:SetAlpha(0)
 		end
 	end
 	win.count:SetText(#order > 0 and (#order .. " seen") or "nothing seen")
