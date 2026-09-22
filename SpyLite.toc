@@ -1,0 +1,6 @@
+## Interface: 16001
+## Title: SpyLite
+## Notes: Enemy player alert for WoW Forever. Nameplates, target and mouseover only (the combat log is closed to addons here). /spy for the window.
+## Version: 1.0
+## SavedVariables: SpyLiteDB
+SpyLite.lua
